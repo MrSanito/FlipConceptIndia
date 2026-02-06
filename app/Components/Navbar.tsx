@@ -13,7 +13,7 @@ export default function Navbar() {
   const isHome = pathname === "/";
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleScroll = () => setScrolled(window.scrollY > 2);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -22,10 +22,8 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 border-b ${
-        showSolid
-          ? "bg-white/95 dark:bg-gray-950/95 backdrop-blur-md shadow-lg border-gray-200/50 dark:border-gray-800/50 h-16"
-          : "bg-transparent border-transparent h-20"
+      className={`fixed top-0 w-full z-50 transition-all duration-300 border-b bg-white/80 dark:bg-gray-950/80 backdrop-blur-md shadow-lg border-gray-200/50 dark:border-gray-800/50 ${
+        scrolled ? "h-16" : "h-17"
       }`}
     >
       <div className="max-w-7xl mx-auto h-full flex items-center justify-between px-6 lg:px-8">
@@ -34,14 +32,8 @@ export default function Navbar() {
           <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-red-600 text-white font-bold text-xl shadow-lg ring-1 ring-white/20 group-hover:scale-105 transition-transform">
             F
           </div>
-          <span
-            className={`text-xl font-bold tracking-tight transition-colors duration-300 ${
-              showSolid
-                ? "text-gray-900 dark:text-white"
-                : "text-white drop-shadow-md"
-            }`}
-          >
-Flip Concpet India          </span>
+          <span className="text-xl font-bold tracking-tight text-gray-900 dark:text-white transition-colors duration-300">
+Flip Concept India          </span>
         </Link>
 
         {/* Desktop Menu */}
@@ -53,27 +45,17 @@ Flip Concpet India          </span>
             { name: "About", href: "/about" },
             { name: "Contact", href: "/contact" },
           ].map((item) => (
-            <Link
+              <Link
               key={item.name}
               href={item.href}
-              className={`text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 ${
-                showSolid
-                  ? "text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-500"
-                  : "text-white/90 hover:text-white drop-shadow-sm"
-              }`}
+              className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-500 transition-all duration-300 hover:-translate-y-0.5"
             >
               {item.name}
             </Link>
           ))}
 
           <Link href="/contact">
-            <button
-              className={`btn rounded-full px-6 font-semibold shadow-md transition-all hover:scale-105 ${
-                showSolid
-                  ? "btn-primary"
-                  : "btn-secondary bg-white text-orange-600 hover:bg-gray-100 border-none"
-              }`}
-            >
+            <button className="btn btn-primary rounded-full px-6 font-semibold shadow-md transition-all hover:scale-105">
               Get Quote
             </button>
           </Link>
@@ -83,7 +65,7 @@ Flip Concpet India          </span>
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`btn btn-ghost btn-circle ${showSolid ? "text-gray-900 dark:text-white" : "text-white"}`}
+            className="btn btn-ghost btn-circle text-gray-900 dark:text-white"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>

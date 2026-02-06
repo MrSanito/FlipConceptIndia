@@ -1,2 +1,109 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
 @plugin "daisyui";
+
+@theme {
+  /* Brand Colors - Supreme Waterproofing Theme */
+  /* Primary: Cyan Blue #4AB8D6 | Secondary: Navy Blue #0A1E3C */
+  
+  --color-background: 0 0% 100%;
+  --color-foreground: 200 70% 13%; /* Navy Blue for text */
+  --color-card: 0 0% 100%;
+  --color-card-foreground: 200 70% 13%;
+  --color-popover: 0 0% 100%;
+  --color-popover-foreground: 200 70% 13%;
+  
+  /* Primary = Cyan Blue */
+  --color-primary: 193 63% 57%; /* #4AB8D6 */
+  --color-primary-foreground: 0 0% 100%;
+  
+  /* Secondary = Navy Blue */
+  --color-secondary: 200 70% 13%; /* #0A1E3C */
+  --color-secondary-foreground: 0 0% 100%;
+  
+  --color-muted: 0 0% 96.1%;
+  --color-muted-foreground: 200 30% 40%;
+  
+  /* Accent = Lighter Cyan */
+  --color-accent: 193 63% 90%;
+  --color-accent-foreground: 200 70% 13%;
+  
+  --color-destructive: 0 84.2% 60.2%;
+  --color-destructive-foreground: 0 0% 98%;
+  --color-border: 0 0% 89.8%;
+  --color-input: 0 0% 89.8%;
+  --color-ring: 193 63% 57%; /* Cyan for focus rings */
+  
+  --color-chart-1: 193 63% 57%; /* Cyan */
+  --color-chart-2: 200 70% 13%; /* Navy */
+  --color-chart-3: 193 63% 70%; /* Light Cyan */
+  --color-chart-4: 200 50% 25%; /* Medium Navy */
+  --color-chart-5: 193 40% 45%; /* Muted Cyan */
+  
+  /* Sidebar Colors - Brand Theme */
+  --color-sidebar: 0 0% 98%;
+  --color-sidebar-foreground: 200 70% 13%;
+  --color-sidebar-primary: 193 63% 57%; /* Cyan */
+  --color-sidebar-primary-foreground: 0 0% 100%;
+  --color-sidebar-accent: 193 63% 95%;
+  --color-sidebar-accent-foreground: 200 70% 13%;
+  --color-sidebar-border: 0 0% 90%;
+  --color-sidebar-ring: 193 63% 57%;
+  
+  --radius: 0.5rem;
+  
+  /* Dark Mode - Inverted Brand Colors */
+  --color-background--dark: 200 70% 8%; /* Darker Navy */
+  --color-foreground--dark: 0 0% 98%;
+  --color-card--dark: 200 70% 13%; /* Navy */
+  --color-card-foreground--dark: 0 0% 98%;
+  --color-popover--dark: 200 70% 13%;
+  --color-popover-foreground--dark: 0 0% 98%;
+  
+  /* Primary stays Cyan in dark mode */
+  --color-primary--dark: 193 63% 57%;
+  --color-primary-foreground--dark: 200 70% 13%;
+  
+  /* Secondary = Lighter in dark mode */
+  --color-secondary--dark: 200 50% 25%;
+  --color-secondary-foreground--dark: 0 0% 98%;
+  
+  --color-muted--dark: 200 50% 20%;
+  --color-muted-foreground--dark: 193 20% 70%;
+  --color-accent--dark: 200 50% 20%;
+  --color-accent-foreground--dark: 193 63% 57%;
+  --color-destructive--dark: 0 62.8% 30.6%;
+  --color-destructive-foreground--dark: 0 0% 98%;
+  --color-border--dark: 200 50% 20%;
+  --color-input--dark: 200 50% 20%;
+  --color-ring--dark: 193 63% 57%;
+  
+  --color-chart-1--dark: 193 63% 57%;
+  --color-chart-2--dark: 193 63% 70%;
+  --color-chart-3--dark: 200 50% 30%;
+  --color-chart-4--dark: 193 40% 45%;
+  --color-chart-5--dark: 200 40% 40%;
+  
+  /* Dark Mode Sidebar */
+  --color-sidebar--dark: 200 70% 13%;
+  --color-sidebar-foreground--dark: 0 0% 95%;
+  --color-sidebar-primary--dark: 193 63% 57%;
+  --color-sidebar-primary-foreground--dark: 200 70% 13%;
+  --color-sidebar-accent--dark: 200 50% 20%;
+  --color-sidebar-accent-foreground--dark: 193 63% 57%;
+  --color-sidebar-border--dark: 200 50% 20%;
+  --color-sidebar-ring--dark: 193 63% 57%;
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--color-border));
+    outline-color: hsl(var(--color-ring) / 0.5);
+  }
+  
+  body {
+    background-color: hsl(var(--color-background));
+    color: hsl(var(--color-foreground));
+  }
+}
