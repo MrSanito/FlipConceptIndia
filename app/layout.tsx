@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./Components/Navbar";
 import ThemeToggle from "./Components/ThemeToggle";
 import ThemeToggler from "./Context/ThemeTogglerContext";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -134,6 +135,7 @@ export default function RootLayout({
             {children}
           </ThemeToggle>
         </ThemeToggler>
+        <SpeedInsights />
       </body>
     </html>
   );
