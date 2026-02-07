@@ -7,6 +7,8 @@ import ThemeToggle from "./Hooks/ThemeToggle";
 import ThemeTogglerProvider from "./Context/ThemeTogglerProvider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next"
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -154,6 +156,7 @@ export default function RootLayout({
           </ThemeToggle>
         </ThemeTogglerProvider>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

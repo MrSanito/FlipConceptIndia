@@ -1,7 +1,6 @@
 import dynamic from "next/dynamic";
 import HeroSection from "./Components/HeroSection";
 
-const ServicesStrip = dynamic(() => import("./Components/ServicesStrip"), { ssr: true });
 const ProductCategories = dynamic(() => import("./Components/ProductCategories"), { ssr: true });
 const WhyChooseUs = dynamic(() => import("./Components/WhyChooseUs"), { ssr: true });
 const StatsSection = dynamic(() => import("./Components/StatsSection"), { ssr: true });
@@ -36,7 +35,6 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <HeroSection/>
-      <ServicesStrip />
       <ProductCategories/>
       <WhyChooseUs />
       <StatsSection />

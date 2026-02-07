@@ -23,7 +23,7 @@ interface Category {
 
 const ProductCategories = () => {
   return (
-    <div className="flex justify-center items-center flex-col text-center py-4 pt-24">
+    <div id="Services_Section" className="flex justify-center items-center flex-col text-center py-4 pt-24">
       <div>
         <h1 className="font-bold text-3xl my-2 text-gray-900 dark:text-white">Product Categories</h1>
         <p className="mb-4 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
