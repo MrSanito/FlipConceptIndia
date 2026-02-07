@@ -1,11 +1,11 @@
 {
-  "name": "Flip Concept India - Professional Waterproofing Solutions",
+  "name": "Flip Concept India - #1 Waterproofing Solutions",
   "short_name": "Flip Concept India",
-  "description": "Leading waterproofing company in India offering heavy-duty, engineering-grade industrial protection",
+  "description": "#1 Waterproofing company in India and Vadodara, offering engineering-grade industrial protection.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#ea580c",
+  "theme_color": "#0A1E3C",
   "orientation": "portrait-primary",
   "icons": [
     {

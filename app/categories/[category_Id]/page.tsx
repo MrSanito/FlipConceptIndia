@@ -26,9 +26,9 @@ export async function generateMetadata({ params }: Props) {
   const productNames = category.products.map(p => p.name).join(", ");
 
   return {
-    title: `${category.name} | Flip Concept India`,
-    description: `Explore our range of ${category.name} including ${productNames}. High-quality industrial manufacturing.`,
-    keywords: [category.name, ...category.products.map(p => p.name), "Industrial Machinery", "Waterproofing", "Coating", "Flip Concept India"],
+    title: `${category.name} in India & Vadodara | Flip Concept India`,
+    description: `Best ${category.name} services in India and Vadodara, Gujarat. Engineering-grade industrial solutions for ${productNames}. Professional contractors.`,
+    keywords: [category.name, ...category.products.map(p => p.name), "best waterproofing in India", "top contractors India", "Waterproofing Vadodara", "Flip Concept India"],
     openGraph: {
       title: `${category.name} | Flip Concept Enterprise`,
       description: category.description,
@@ -198,7 +198,7 @@ export default async function CategoryDetailPage({ params }: Props) {
                     "item": {
                         "@type": "Product",
                         "name": product.name,
-                        "description": `High-quality ${product.name} from Flip Concept India.`,
+                        "description": `High-quality ${product.name} in Vadodara from Flip Concept India. Professional ${category.name} services.`,
                         "image": product.image && product.image.startsWith('/') ? `https://flipconceptindia.com${product.image}` : product.image || "https://flipconceptindia.com/og-image.jpg",
                          "offers": {
                             "@type": "Offer",

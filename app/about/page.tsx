@@ -45,7 +45,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-7xl font-extrabold text-white mb-6 tracking-tight"
           >
-            Leading the Way in <span className="text-blue-500">Industrial Protection</span>
+            #1 Choice for Engineering-Grade <span className="text-blue-500">Waterproofing in India</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -53,7 +53,7 @@ export default function AboutPage() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-lg md:text-xl text-gray-300 leading-relaxed font-light"
           >
-            Over 25 years of excellence in engineering-grade waterproofing and high-performance industrial coatings.
+            Setting the global benchmark for industrial protection and high-performance coatings across the Indian subcontinent.
           </motion.p>
         </div>
       </section>

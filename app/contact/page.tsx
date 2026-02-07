@@ -74,7 +74,7 @@ export default function ContactPage() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed"
           >
-            Have a project in mind? We'd love to hear from you. Reach out to our team of experts for a custom quote or consultation.
+            Reach out to our team of experts for projects in Vadodara, Gujarat, or anywhere in India. We provide custom technical consultations and engineering-grade solutions nationwide.
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}

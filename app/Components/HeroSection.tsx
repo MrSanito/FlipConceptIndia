@@ -21,12 +21,12 @@ const HeroSection = () => {
 
             {/* Main Heading */}
             <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold text-slate-900 dark:text-white leading-tight">
-              Professional Waterproofing Solutions for Your Property
+              India's Leading Waterproofing Experts in Vadodara
             </h1>
 
             {/* Subheading */}
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-              Heavy-duty, engineering-grade protection for roofs, basements, terraces, and commercial buildings. Trusted by 500+ clients across India.
+              Professional heavy-duty, engineering-grade protection for roofs, basements, and industrial structures. Serving clients across Vadodara, Gujarat, and throughout India with premium quality and a 10-year warranty.
             </p>
 
             {/* Key Features */}

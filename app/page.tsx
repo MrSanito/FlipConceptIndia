@@ -24,8 +24,41 @@ export default function Home() {
       "postalCode": "390016",
       "addressCountry": "IN"
     },
-    "description": "Leading waterproofing company in India offering heavy-duty, engineering-grade industrial protection. Expert waterproofing services for roofs, basements, terraces, and commercial buildings.",
-    // ...
+    "description": "#1 Waterproofing company in India and Vadodara. Providing engineering-grade industrial protection, roof waterproofing, and basement leakage solutions across Gujarat and all major Indian cities.",
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "India"
+      },
+      {
+        "@type": "State",
+        "name": "Gujarat"
+      },
+      {
+        "@type": "City",
+        "name": "Vadodara"
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Waterproofing Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Industrial Waterproofing"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Roof Waterproofing"
+          }
+        }
+      ]
+    }
   };
 
   return (
