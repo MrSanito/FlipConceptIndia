@@ -87,8 +87,15 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'Iae0Y0ZkJF05ZX9s-c8yw38897snq6o8VT1JHiCfP2A',
-    // yandex: 'your-yandex-verification-code',
-    // bing: 'your-bing-verification-code',
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: ['/favicon.svg'],
+    apple: [
+      { url: '/favicon.svg' },
+    ],
   },
 };
 

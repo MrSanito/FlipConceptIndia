@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const HeroSection = () => {
   return (
@@ -52,12 +53,16 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <button className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-md hover:shadow-lg shadow-blue-500/30">
-                Get Free Inspection
-              </button>
-              <button className="px-8 py-4 bg-white dark:bg-slate-900 border-2 border-slate-900 dark:border-white text-slate-900 dark:text-white font-semibold rounded-lg hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-colors duration-200">
-                Call: +91-8866002566
-              </button>
+              <Link href="/contact" className="w-full sm:w-auto">
+                <button className="w-full px-8 py-4 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-500/40">
+                  Get Free Inspection
+                </button>
+              </Link>
+              <a href="tel:+918866002566" className="w-full sm:w-auto">
+                <button className="w-full px-8 py-4 bg-white dark:bg-slate-900 border-2 border-slate-900 dark:border-white text-slate-900 dark:text-white font-bold rounded-lg hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-all">
+                  Call: +91-8866002566
+                </button>
+              </a>
             </div>
 
             {/* Trust Indicators */}
