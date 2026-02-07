@@ -4,13 +4,19 @@ import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail, Send, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Send, Clock, ShieldCheck } from "lucide-react";
+import { motion } from "framer-motion";
 
 import dynamic from "next/dynamic";
 
 const InquireModal = dynamic(() => import("../Components/InquireModal"), {
   ssr: false,
 });
+
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -50,26 +56,39 @@ export default function ContactPage() {
       {/* Hero Section */}
       <div className="relative bg-gray-900 py-24 sm:py-32 overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-blue-900/20" />
-           {/* Abstract background pattern could go here */}
-           <div className="absolute -top-24 -right-24 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
-           <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl" />
+          <div className="absolute inset-0 bg-blue-900/40" />
+           <div className="absolute -top-24 -right-24 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl opacity-50" />
+           <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl opacity-50" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6 drop-shadow-lg">
+          <motion.h1 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6 drop-shadow-lg"
+          >
             Get in <span className="text-blue-400">Touch</span>
-          </h1>
-          <p className="mt-4 text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="mt-4 text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed"
+          >
             Have a project in mind? We'd love to hear from you. Reach out to our team of experts for a custom quote or consultation.
-          </p>
-          <div className="mt-8">
+          </motion.p>
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.4 }}
+            className="mt-8"
+          >
              <Button 
                 onClick={() => setIsModalOpen(true)}
-                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg shadow-blue-500/30 hover:scale-105 transition-transform"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg shadow-blue-500/30 hover:scale-105 transition-all"
              >
                 Get Instant Quote via WhatsApp
              </Button>
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -77,31 +96,24 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           
           {/* Contact Information Card */}
-          <div className="bg-blue-600 rounded-2xl shadow-xl shadow-blue-900/20 p-8 md:p-12 text-white flex flex-col justify-between h-full transform transition-transform hover:scale-[1.01] duration-300">
-            <div>
+          <motion.div 
+            variants={fadeIn}
+            initial="hidden"
+            animate="visible"
+            className="bg-blue-600 rounded-3xl shadow-2xl p-8 md:p-12 text-white flex flex-col justify-between h-full relative overflow-hidden group"
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-2xl group-hover:scale-110 transition-transform duration-700" />
+            
+            <div className="relative z-10">
               <h2 className="text-3xl font-bold mb-8">Contact Information</h2>
               
               <div className="space-y-8">
-                <div className="flex items-start gap-5">
-                  <div className="p-3 bg-white/10 rounded-lg backdrop-blur-sm">
+                <div className="flex items-start gap-5 group/item">
+                  <div className="p-3 bg-white/10 rounded-xl backdrop-blur-md group-hover/item:bg-white/20 transition-colors">
                     <MapPin className="w-6 h-6 text-blue-200" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-blue-100 mb-1">Head Office (Mumbai)</h3>
-                    <p className="text-blue-50 leading-relaxed text-sm">
-                      Shop No 2, Gurukrupa Chs,<br />
-                      Ekvira Darshan, Virar East,<br />
-                      Maharashtra 401305
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-5">
-                  <div className="p-3 bg-white/10 rounded-lg backdrop-blur-sm">
-                    <MapPin className="w-6 h-6 text-blue-200" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-blue-100 mb-1">Branch Office (Vadodara)</h3>
+                    <h3 className="text-lg font-semibold text-blue-100 mb-1">Office Location</h3>
                     <p className="text-blue-50 leading-relaxed text-sm">
                       FLIP CONCEPT INDIA PRIVATE LIMITED<br />
                       FF-5, First Floor, AB Tower, Shriji Gold,<br />
@@ -112,20 +124,19 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-5">
-                  <div className="p-3 bg-white/10 rounded-lg backdrop-blur-sm">
+                <div className="flex items-start gap-5 group/item">
+                  <div className="p-3 bg-white/10 rounded-xl backdrop-blur-md group-hover/item:bg-white/20 transition-colors">
                     <Phone className="w-6 h-6 text-blue-200" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-blue-100 mb-1">Contact Numbers</h3>
-                    <p className="text-blue-50">+91 91635 37788 (HQ)</p>
-                    <p className="text-blue-50">+91 88660 02566 (Vadodara)</p>
+                    <h3 className="text-lg font-semibold text-blue-100 mb-1">Contact Number</h3>
+                    <p className="text-blue-50">+91 88660 02566</p>
                     <p className="text-blue-200 text-sm mt-1">Mon-Sat 9am to 6pm</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-5">
-                  <div className="p-3 bg-white/10 rounded-lg backdrop-blur-sm">
+                <div className="flex items-start gap-5 group/item">
+                  <div className="p-3 bg-white/10 rounded-xl backdrop-blur-md group-hover/item:bg-white/20 transition-colors">
                     <Mail className="w-6 h-6 text-blue-200" />
                   </div>
                   <div>
@@ -134,8 +145,8 @@ export default function ContactPage() {
                   </div>
                 </div>
                  
-                 <div className="flex items-start gap-5">
-                  <div className="p-3 bg-white/10 rounded-lg backdrop-blur-sm">
+                 <div className="flex items-start gap-5 group/item">
+                  <div className="p-3 bg-white/10 rounded-xl backdrop-blur-md group-hover/item:bg-white/20 transition-colors">
                     <Clock className="w-6 h-6 text-blue-200" />
                   </div>
                   <div>
@@ -146,15 +157,26 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="mt-12 pt-8 border-t border-white/10">
-              <p className="text-blue-100 text-sm">
-                Connect with us on social media for latest updates.
-              </p>
+            <div className="mt-12 pt-8 border-t border-white/10 relative z-10">
+               <div className="flex items-center gap-3">
+                  <div className="p-2 bg-green-500/20 rounded-full">
+                     <ShieldCheck className="w-5 h-5 text-green-300" />
+                  </div>
+                  <p className="text-blue-100 text-sm font-medium">
+                    Certified Professional Waterproofing
+                  </p>
+               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Contact Form */}
-          <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl shadow-gray-200/50 dark:shadow-black/50 p-8 md:p-12 border border-gray-100 dark:border-gray-800">
+          <motion.div 
+            variants={fadeIn}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.2 }}
+            className="bg-white dark:bg-gray-900 rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-100 dark:border-gray-800"
+          >
             <div className="flex justify-between items-center mb-2">
                  <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Send us a Message</h2>
             </div>
@@ -163,9 +185,13 @@ export default function ContactPage() {
             </p>
 
             {submitted ? (
-              <div className="flex flex-col items-center justify-center text-center py-12 space-y-4 bg-green-50 dark:bg-green-900/10 rounded-xl border border-green-100 dark:border-green-900/20">
-                <div className="w-16 h-16 bg-green-100 dark:bg-green-800 rounded-full flex items-center justify-center mb-2">
-                  <Send className="w-8 h-8 text-green-600 dark:text-green-300 transform -rotate-45 translate-x-1" />
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="flex flex-col items-center justify-center text-center py-12 space-y-4 bg-green-50 dark:bg-green-900/10 rounded-2xl border border-green-100 dark:border-green-900/20"
+              >
+                <div className="w-20 h-20 bg-green-100 dark:bg-green-800 rounded-full flex items-center justify-center mb-2 shadow-lg shadow-green-500/10">
+                  <Send className="w-10 h-10 text-green-600 dark:text-green-300 transform -rotate-45 translate-x-1" />
                 </div>
                 <h3 className="text-2xl font-bold text-green-800 dark:text-green-300">Message Sent!</h3>
                 <p className="text-green-600 dark:text-green-400 max-w-xs mx-auto">
@@ -173,11 +199,11 @@ export default function ContactPage() {
                 </p>
                 <Button 
                    onClick={() => setSubmitted(false)}
-                   className="mt-6 bg-green-600 hover:bg-green-700 text-white"
+                   className="mt-6 bg-green-600 hover:bg-green-700 text-white rounded-full px-8"
                 >
                    Send Another Message
                 </Button>
-              </div>
+              </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -192,7 +218,7 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-blue-500 dark:focus:border-blue-500 transition-colors h-11"
+                      className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:ring-blue-500/20 transition-all h-12 rounded-xl"
                     />
                   </div>
                   <div className="space-y-2">
@@ -207,7 +233,7 @@ export default function ContactPage() {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-blue-500 dark:focus:border-blue-500 transition-colors h-11"
+                      className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:ring-blue-500/20 transition-all h-12 rounded-xl"
                     />
                   </div>
                 </div>
@@ -224,7 +250,7 @@ export default function ContactPage() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-blue-500 dark:focus:border-blue-500 transition-colors h-11"
+                    className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:ring-blue-500/20 transition-all h-12 rounded-xl"
                   />
                 </div>
 
@@ -240,13 +266,13 @@ export default function ContactPage() {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="flex min-h-[120px] w-full rounded-md border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-3 py-3 text-base shadow-sm placeholder:text-gray-400 focus-visible:outline-none focus:border-blue-500 dark:focus:border-blue-500 focus:ring-1 focus:ring-blue-500 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm transition-colors resize-none"
+                    className="flex min-h-[120px] w-full rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-3 py-3 text-base shadow-sm placeholder:text-gray-400 focus-visible:outline-none focus:ring-2 focus:ring-blue-500/20 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm transition-all resize-none"
                   />
                 </div>
 
                 <Button 
                     type="submit" 
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-6 text-lg shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-0.5"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-7 text-lg shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-1 rounded-xl"
                     disabled={isSubmitting}
                 >
                     {isSubmitting ? (
@@ -265,17 +291,17 @@ export default function ContactPage() {
             )}
             
             <div className="mt-8 pt-6 border-t border-gray-100 dark:border-gray-800 text-center">
-                 <p className="text-gray-500 dark:text-gray-400 mb-4">Prefer WhatsApp?</p>
+                 <p className="text-gray-500 dark:text-gray-400 text-sm mb-4">Need immediate assistance?</p>
                  <Button 
                     variant="outline"
                     onClick={() => setIsModalOpen(true)}
-                    className="w-full border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20"
+                    className="w-full border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl h-12"
                  >
                     Chat with us via WhatsApp
                  </Button>
             </div>
 
-          </div>
+          </motion.div>
         </div>
       </div>
       

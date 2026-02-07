@@ -174,19 +174,19 @@ export default async function CategoryDetailPage({ params }: Props) {
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://vishaltoolsenterprise.com"
+                    "item": "https://flipconceptindia.com"
                   },
                   {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Categories",
-                    "item": "https://vishaltoolsenterprise.com/categories"
+                    "item": "https://flipconceptindia.com/categories"
                   },
                   {
                     "@type": "ListItem",
                     "position": 3,
                     "name": category.name,
-                    "item": `https://vishaltoolsenterprise.com/categories/${category.id}`
+                    "item": `https://flipconceptindia.com/categories/${category.id}`
                   }
                 ]
               },
@@ -198,13 +198,13 @@ export default async function CategoryDetailPage({ params }: Props) {
                     "item": {
                         "@type": "Product",
                         "name": product.name,
-                        "description": `High-quality ${product.name} from Vishal Tools Enterprise.`,
-                        "image": product.image && product.image.startsWith('/') ? `https://vishaltoolsenterprise.com${product.image}` : product.image || "https://vishaltoolsenterprise.com/Hero.jpg",
+                        "description": `High-quality ${product.name} from Flip Concept India.`,
+                        "image": product.image && product.image.startsWith('/') ? `https://flipconceptindia.com${product.image}` : product.image || "https://flipconceptindia.com/og-image.jpg",
                          "offers": {
                             "@type": "Offer",
                             "availability": "https://schema.org/InStock",
                             "priceCurrency": "INR",
-                            "price": "0" // 0 implies 'contact for price' usually, or use AggregateOffer
+                            "price": "0" 
                         }
                     }
                 }))

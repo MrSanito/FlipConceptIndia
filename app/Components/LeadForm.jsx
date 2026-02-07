@@ -38,7 +38,7 @@ const LeadForm = ({ open, onOpenChange }) => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        to: "916353778872", // Your verified WhatsApp number
+        to: "918866002566", // Your verified WhatsApp number
         ...payload,
      
       }),

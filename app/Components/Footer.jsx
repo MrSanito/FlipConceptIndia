@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { categories } from "../data/data.ts";
 import {
   FaFacebookF,
   FaTwitter,
@@ -14,21 +15,16 @@ const Footer = () => {
         {/* Left Section */}
         <div>
           <h2 className="text-gray-900 dark:text-white font-bold text-lg flex items-center gap-2 mb-4">
-            <span className="text-blue-600 dark:text-blue-500 text-2xl">🏭</span> Flip Concept India
+            <span className="text-blue-600 dark:text-blue-500 text-2xl">🛡️</span> Flip Concept India
           </h2>
           <p className="text-sm leading-relaxed mb-6">
-            Leading manufacturer of high-quality industrial machinery and tools.
-            Serving industries worldwide with innovative solutions for over 25
-            years.
+            Engineering-grade waterproofing and high-performance industrial coating solutions.
+            Protecting your assets with cutting-edge technology and certified expertise for over 25 years.
           </p>
           
           <div className="mb-6 space-y-4">
              <div>
-                <h4 className="text-gray-900 dark:text-white text-sm font-semibold">Head Office (Mumbai)</h4>
-                <p className="text-xs text-gray-500 dark:text-gray-400">Virar East, Maharashtra 401305</p>
-             </div>
-             <div>
-                <h4 className="text-gray-900 dark:text-white text-sm font-semibold">Branch Office (Vadodara)</h4>
+                <h4 className="text-gray-900 dark:text-white text-sm font-semibold">Vadodara</h4>
                 <p className="text-xs text-gray-500 dark:text-gray-400">
                   FF-5, AB Tower, Shriji Gold, Laxmipura Road, Gorwa, Vadodara, Gujarat 390016
                 </p>
@@ -52,11 +48,13 @@ const Footer = () => {
 
         {/* Products */}
         <div>
-          <h3 className="text-gray-900 dark:text-white font-semibold mb-4">Products</h3>
+          <h3 className="text-gray-900 dark:text-white font-semibold mb-4">Categories</h3>
           <ul className="space-y-2 text-sm">
-            {["Hammer Mills", "CNC Machines", "Conveyor Systems", "Cutting Tools", "Hydraulic Equipment"].map((item) => (
-              <li key={item}>
-                <Link href="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{item}</Link>
+            {categories.slice(0, 6).map((cat) => (
+              <li key={cat.id}>
+                <Link href={`/categories/${cat.id}`} className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  {cat.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -66,9 +64,15 @@ const Footer = () => {
         <div>
           <h3 className="text-gray-900 dark:text-white font-semibold mb-4">Services</h3>
           <ul className="space-y-2 text-sm">
-            {["Custom Manufacturing", "Maintenance Services", "Technical Support", "Installation", "Training"].map((item) => (
-              <li key={item}>
-                <Link href="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{item}</Link>
+            {[
+              { name: "Roof Waterproofing", href: "/categories/waterproofing-systems" },
+              { name: "Basement Protection", href: "/categories/waterproofing-systems" },
+              { name: "Industrial Coatings", href: "/categories/protective-industrial-coatings" },
+              { name: "Floor Coatings", href: "/categories/chemical-industrial-flooring" },
+              { name: "Insulation Services", href: "/categories/insulation-services" }
+            ].map((item) => (
+              <li key={item.name}>
+                <Link href={item.href} className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{item.name}</Link>
               </li>
             ))}
           </ul>
@@ -78,9 +82,15 @@ const Footer = () => {
         <div>
           <h3 className="text-gray-900 dark:text-white font-semibold mb-4">Company</h3>
           <ul className="space-y-2 text-sm">
-            {["About Us", "Careers", "News", "Quality", "Contact"].map((item) => (
-              <li key={item}>
-                <Link href="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{item}</Link>
+            {[
+              { name: "About Us", href: "/#WhyChooseUs_Section" },
+              { name: "Products", href: "/categories" },
+              { name: "Services", href: "/#Services_Section" },
+              { name: "Quality Assurance", href: "/#WhyChooseUs_Section" },
+              { name: "Contact", href: "/contact" }
+            ].map((item) => (
+              <li key={item.name}>
+                <Link href={item.href} className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{item.name}</Link>
               </li>
             ))}
           </ul>

@@ -59,7 +59,7 @@ export default function InquireModal({ product, isOpen, onClose }) {
   };
 
   const openWhatsApp = () => {
-    const phoneNumber = "919163537788";
+    const phoneNumber = "918866002566";
      // Construct the message
     const text = `*New Inquiry for: ${product?.name || "General Query"}*%0A%0A` +
                  `*Name:* (Sent via Email)%0A` + 

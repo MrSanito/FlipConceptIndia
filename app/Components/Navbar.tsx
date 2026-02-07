@@ -46,6 +46,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-8">
           {[
             { name: "Home", href: "/" },
+            { name: "About", href: "/about" },
             { name: "Products", href: "/categories" },
             { name: "Services", href: "/#Services_Section" },
             { name: "Contact", href: "/contact" },
@@ -111,6 +112,7 @@ export default function Navbar() {
               <div className="flex flex-col gap-2">
                 {[
                   { name: "Home", href: "/" },
+                  { name: "About", href: "/about" },
                   { name: "Products", href: "/categories" },
                   { name: "Services", href: "/#Services_Section" },
                   { name: "Contact", href: "/contact" },

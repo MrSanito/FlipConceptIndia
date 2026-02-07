@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const HeroSection = () => {
   return (
@@ -55,7 +56,7 @@ const HeroSection = () => {
                 Get Free Inspection
               </button>
               <button className="px-8 py-4 bg-white dark:bg-slate-900 border-2 border-slate-900 dark:border-white text-slate-900 dark:text-white font-semibold rounded-lg hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-colors duration-200">
-                Call: +91-9163537788
+                Call: +91-8866002566
               </button>
             </div>
 
@@ -79,16 +80,22 @@ const HeroSection = () => {
 
           {/* Right Content - Image */}
           <div className="relative lg:h-[600px] h-[400px]">
-             {/* ... (Image Content) ... */}
+             {/* Background Decoration */}
+            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-blue-500/10 rounded-full -z-10"></div>
+            <div className="absolute -top-4 -left-4 w-24 h-24 bg-blue-900/5 rounded-full -z-10"></div>
+
             <div className="relative h-full rounded-2xl overflow-hidden shadow-2xl border border-gray-100 dark:border-gray-800">
-              <img 
-                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop" 
+              <Image 
+                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1200&auto=format&fit=crop" 
                 alt="Professional Waterproofing Work"
-                className="w-full h-full object-cover"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
               />
-              <div className="absolute bottom-6 left-6 right-6 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-lg p-4 shadow-lg border border-gray-100 dark:border-gray-800">
+              <div className="absolute bottom-6 left-6 right-6 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-lg p-4 shadow-lg border border-gray-100 dark:border-gray-800 z-10">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-lg bg-blue-600 flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-lg bg-blue-600 flex items-center justify-center shrink-0">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
@@ -100,8 +107,6 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-blue-500/10 rounded-full -z-10"></div>
-            <div className="absolute -top-4 -left-4 w-24 h-24 bg-blue-900/5 rounded-full -z-10"></div>
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import Footer from "./Components/Footer";
 import ThemeToggle from "./Hooks/ThemeToggle";
 import ThemeTogglerProvider from "./Context/ThemeTogglerProvider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,9 +35,12 @@ export const metadata: Metadata = {
     "Flip Concept India",
     "waterproofing company",
     "leak repair services",
-    "damp proofing solutions"
+    "damp proofing solutions",
+    "epoxy flooring",
+    "industrial coatings",
+    "polyurea waterproofing"
   ],
-  authors: [{ name: "Flip Concept India" }],
+  authors: [{ name: "Flip Concept India", url: "https://flipconceptindia.com" }],
   creator: "Flip Concept India",
   publisher: "Flip Concept India",
   formatDetection: {
@@ -96,12 +100,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google Analytics */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-HGT2CQKDRP"
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-HGT2CQKDRP`}
         />
-        <script
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -113,8 +119,9 @@ export default function RootLayout({
         />
         
         {/* Microsoft Clarity */}
-        <script
-          type="text/javascript"
+        <Script
+          id="microsoft-clarity"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               (function(c,l,a,r,i,t,y){

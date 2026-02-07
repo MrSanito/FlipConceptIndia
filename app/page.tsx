@@ -1,8 +1,10 @@
+import dynamic from "next/dynamic";
 import HeroSection from "./Components/HeroSection";
-import ProductCategories from "./Components/ProductCategories";
-import WhyChooseUs from "./Components/WhyChooseUs";
-import StatsSection from "./Components/StatsSection";
-import ServicesStrip from "./Components/ServicesStrip";
+
+const ServicesStrip = dynamic(() => import("./Components/ServicesStrip"), { ssr: true });
+const ProductCategories = dynamic(() => import("./Components/ProductCategories"), { ssr: true });
+const WhyChooseUs = dynamic(() => import("./Components/WhyChooseUs"), { ssr: true });
+const StatsSection = dynamic(() => import("./Components/StatsSection"), { ssr: true });
 
 export default function Home() {
   const structuredData = {
@@ -10,20 +12,19 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Flip Concept India",
-    "image": "https://flipconceptindia.com/logo-transparent.png", // Updated logo path too
+    "image": "https://flipconceptindia.com/logo-transparent.png",
     "@id": "https://flipconceptindia.com",
     "url": "https://flipconceptindia.com",
-    "telephone": "+91-XXXXXXXXXX",
-    "priceRange": "$$",
+    "telephone": "+918866002566",
+    "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Your Street Address",
-      "addressLocality": "Your City",
-      "addressRegion": "Your State",
-      "postalCode": "XXXXXX",
+      "streetAddress": "FF-5, AB Tower, Shriji Gold, Laxmipura Road, Gorwa",
+      "addressLocality": "Vadodara",
+      "addressRegion": "Gujarat",
+      "postalCode": "390016",
       "addressCountry": "IN"
     },
-    // ...
     "description": "Leading waterproofing company in India offering heavy-duty, engineering-grade industrial protection. Expert waterproofing services for roofs, basements, terraces, and commercial buildings.",
     // ...
   };
