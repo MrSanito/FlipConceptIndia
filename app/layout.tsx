@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./Components/Navbar";
-import ThemeToggle from "./Components/ThemeToggle";
-import ThemeToggler from "./Context/ThemeTogglerContext";
+import Footer from "./Components/Footer";
+import ThemeToggle from "./Hooks/ThemeToggle";
+import ThemeTogglerProvider from "./Context/ThemeTogglerProvider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
@@ -129,12 +130,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeToggler>
+        <ThemeTogglerProvider>
           <Navbar/>
           <ThemeToggle>
-            {children}
+            <main className="min-h-screen">
+               {children}
+            </main>
+            <Footer />
           </ThemeToggle>
-        </ThemeToggler>
+        </ThemeTogglerProvider>
         <SpeedInsights />
       </body>
     </html>

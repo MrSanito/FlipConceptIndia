@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
@@ -29,33 +30,37 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto h-full flex items-center justify-between px-6 lg:px-8">
         {/* Brand */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-red-600 text-white font-bold text-xl shadow-lg ring-1 ring-white/20 group-hover:scale-105 transition-transform">
-            F
+          <div className="relative h-12 w-48 transition-transform group-hover:scale-105">
+            <Image
+              src="/logo-transparent.png"
+              alt="Flip Concept India"
+              width={192} 
+              height={48}
+              className="object-contain w-full h-full"
+              priority
+            />
           </div>
-          <span className="text-xl font-bold tracking-tight text-gray-900 dark:text-white transition-colors duration-300">
-Flip Concept India          </span>
         </Link>
 
-        {/* Desktop Menu */}
+            {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           {[
             { name: "Home", href: "/" },
             { name: "Products", href: "/categories" },
             { name: "Services", href: "/#Services_Section" },
-            { name: "About", href: "/about" },
             { name: "Contact", href: "/contact" },
           ].map((item) => (
               <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-500 transition-all duration-300 hover:-translate-y-0.5"
+              className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-500 transition-all duration-300 hover:-translate-y-0.5"
             >
               {item.name}
             </Link>
           ))}
 
           <Link href="/contact">
-            <button className="btn btn-primary rounded-full px-6 font-semibold shadow-md transition-all hover:scale-105">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6 py-2 font-semibold shadow-md shadow-blue-500/20 transition-all hover:scale-105">
               Get Quote
             </button>
           </Link>
@@ -92,7 +97,7 @@ Flip Concept India          </span>
               className="fixed top-0 right-0 w-[75%] max-w-sm h-full bg-white dark:bg-gray-950 shadow-2xl z-50 flex flex-col p-6 border-l border-gray-100 dark:border-gray-800"
             >
               <div className="flex justify-between items-center mb-8 pb-4 border-b border-gray-100 dark:border-gray-800">
-                <span className="text-xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+                <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
                   Menu
                 </span>
                 <button
@@ -108,16 +113,15 @@ Flip Concept India          </span>
                   { name: "Home", href: "/" },
                   { name: "Products", href: "/categories" },
                   { name: "Services", href: "/#Services_Section" },
-                  { name: "About", href: "/about" },
                   { name: "Contact", href: "/contact" },
                 ].map((item, idx) => (
                   <Link
                     key={idx}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="flex items-center justify-between p-3 rounded-xl hover:bg-orange-50 dark:hover:bg-gray-900 group transition-colors"
+                    className="flex items-center justify-between p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/20 group transition-colors"
                   >
-                    <span className="text-lg font-medium text-gray-700 dark:text-gray-300 group-hover:text-orange-600">
+                    <span className="text-lg font-medium text-gray-700 dark:text-gray-300 group-hover:text-blue-600">
                       {item.name}
                     </span>
                     <span className="text-gray-400 group-hover:translate-x-1 transition-transform">
@@ -129,7 +133,7 @@ Flip Concept India          </span>
 
               <div className="mt-auto pt-6 border-t border-gray-100 dark:border-gray-800">
                 <Link href="/contact" onClick={() => setIsOpen(false)}>
-                  <button className="btn w-full rounded-xl py-6 text-lg bg-gradient-to-r from-orange-600 to-red-600 text-white border-none">
+                  <button className="btn w-full rounded-xl py-6 text-lg bg-gradient-to-r from-blue-600 to-blue-800 text-white border-none shadow-lg shadow-blue-500/30">
                     Get a Quote Now
                   </button>
                 </Link>

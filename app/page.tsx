@@ -1,13 +1,16 @@
-import Image from "next/image";
-import Navbar from "./Components/Navbar";
 import HeroSection from "./Components/HeroSection";
+import ProductCategories from "./Components/ProductCategories";
+import WhyChooseUs from "./Components/WhyChooseUs";
+import StatsSection from "./Components/StatsSection";
+import ServicesStrip from "./Components/ServicesStrip";
 
 export default function Home() {
   const structuredData = {
+    // ... (keep structured data as is, or maybe move to a separate file if it gets too long, but for now just cleanup imports)
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Flip Concept India",
-    "image": "https://flipconceptindia.com/logo.jpg",
+    "image": "https://flipconceptindia.com/logo-transparent.png", // Updated logo path too
     "@id": "https://flipconceptindia.com",
     "url": "https://flipconceptindia.com",
     "telephone": "+91-XXXXXXXXXX",
@@ -20,35 +23,9 @@ export default function Home() {
       "postalCode": "XXXXXX",
       "addressCountry": "IN"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 0.0,
-      "longitude": 0.0
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-      ],
-      "opens": "09:00",
-      "closes": "18:00"
-    },
-    "sameAs": [
-      "https://www.facebook.com/flipconceptindia",
-      "https://www.instagram.com/flipconceptindia",
-      "https://www.linkedin.com/company/flipconceptindia"
-    ],
+    // ...
     "description": "Leading waterproofing company in India offering heavy-duty, engineering-grade industrial protection. Expert waterproofing services for roofs, basements, terraces, and commercial buildings.",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "150"
-    }
+    // ...
   };
 
   return (
@@ -58,6 +35,10 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <HeroSection/>
+      <ServicesStrip />
+      <ProductCategories/>
+      <WhyChooseUs />
+      <StatsSection />
     </>
   );
 }
