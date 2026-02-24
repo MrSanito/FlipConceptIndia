@@ -1,6 +1,9 @@
 "use server";
 
-import nodemailer from "nodemailer";
+import { Resend } from 'resend';
+
+// Initialize Resend with the provided API Key
+const resend = new Resend(process.env.RESEND_API_KEY || 're_5LGL8wPT_MjbXsxEvsqAszRtPkgPH23Pg');
 
 interface EmailData {
   name: string;
@@ -21,36 +24,12 @@ export async function sendEmail(data: EmailData): Promise<ActionState> {
     return { success: false, message: "Missing required fields." };
   }
 
-  // 2. Check Configuration
-  const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, CONTACT_EMAIL } = process.env;
-
-  // If configuration is missing, we can simulate success for development 
-  // or return an error depending on preference. For now, we'll return a specific message.
-  if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
-    console.warn("SMTP Configuration missing. Email not sent.");
-    return { 
-      success: true, 
-      message: "Simulation: Email 'sent' (SMTP not configured)." 
-    };
-  }
-
   try {
-    // 3. Create Transporter
-    const transporter = nodemailer.createTransport({
-      host: SMTP_HOST,
-      port: Number(SMTP_PORT) || 587,
-      secure: Number(SMTP_PORT) === 465, // true for 465, false for other ports
-      auth: {
-        user: SMTP_USER,
-        pass: SMTP_PASS,
-      },
-    });
-
-    // 4. Send Email
-    await transporter.sendMail({
-      from: `"Flip Concept Website" <${SMTP_USER}>`, // Sender address
-      to: CONTACT_EMAIL || SMTP_USER, // List of receivers
-      subject: `New Inquiry: ${data.productName || "General Contact"}`, // Subject line
+    // 2. Send Email using Resend
+    const result = await resend.emails.send({
+      from: 'Flip Concept India <onboarding@resend.dev>', // Update this with your verified domain
+      to: ['1988krishnani@gmail.com'], // Update to admin's email or client email where inquiries should go
+      subject: `New Inquiry: ${data.productName || "General Contact"}`,
       text: `
         Name: ${data.name}
         Email: ${data.email}
@@ -58,7 +37,7 @@ export async function sendEmail(data: EmailData): Promise<ActionState> {
         
         Message:
         ${data.message}
-      `, // plain text body
+      `,
       html: `
         <h3>New Website Inquiry</h3>
         <p><strong>Product:</strong> ${data.productName || "General Contact"}</p>
@@ -68,8 +47,13 @@ export async function sendEmail(data: EmailData): Promise<ActionState> {
         <br/>
         <p><strong>Message:</strong></p>
         <p>${data.message.replace(/\n/g, "<br/>")}</p>
-      `, // html body
+      `,
     });
+
+    if (result.error) {
+      console.error("Resend API Error:", result.error);
+      return { success: false, message: result.error.message || "Failed to send email." };
+    }
 
     return { success: true, message: "Email sent successfully!" };
   } catch (error) {
