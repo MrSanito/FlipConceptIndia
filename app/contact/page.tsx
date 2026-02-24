@@ -237,7 +237,7 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:ring-blue-500/20 transition-all h-12 rounded-xl"
+                      className="text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-600 bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:ring-blue-500/20 transition-all h-12 rounded-xl"
                     />
                   </div>
                   <div className="space-y-2">
@@ -252,7 +252,7 @@ export default function ContactPage() {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:ring-blue-500/20 transition-all h-12 rounded-xl"
+                      className="text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-600 bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:ring-blue-500/20 transition-all h-12 rounded-xl"
                     />
                   </div>
                 </div>
@@ -269,7 +269,7 @@ export default function ContactPage() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:ring-blue-500/20 transition-all h-12 rounded-xl"
+                    className="text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-600 bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:ring-blue-500/20 transition-all h-12 rounded-xl"
                   />
                 </div>
 
@@ -285,7 +285,7 @@ export default function ContactPage() {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="flex min-h-[120px] w-full rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-3 py-3 text-base shadow-sm placeholder:text-gray-400 focus-visible:outline-none focus:ring-2 focus:ring-blue-500/20 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm transition-all resize-none"
+                    className="text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-600 flex min-h-[120px] w-full rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-3 py-3 text-base shadow-sm focus-visible:outline-none focus:ring-2 focus:ring-blue-500/20 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm transition-all resize-none"
                   />
                 </div>
 

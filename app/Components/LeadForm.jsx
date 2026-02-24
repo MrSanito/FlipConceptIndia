@@ -63,6 +63,7 @@ const LeadForm = ({ open, onOpenChange }) => {
               id="name"
               name="name"
               defaultValue="Name"
+              className="text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-600 bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700"
               onChange={(e) => {
                 handleChange(e);
               }}
@@ -74,6 +75,7 @@ const LeadForm = ({ open, onOpenChange }) => {
               id="number"
               name="Number"
               placeholder="Enter Your Mobile Number"
+              className="text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-600 bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700"
               onChange={(e) => {
                 handleChange(e);
               }}
@@ -85,6 +87,7 @@ const LeadForm = ({ open, onOpenChange }) => {
               id="email"
               name="Email"
               placeholder="Enter Your Email here"
+              className="text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-600 bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700"
               onChange={(e) => {
                 handleChange(e);
               }}

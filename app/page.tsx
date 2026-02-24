@@ -4,6 +4,7 @@ import HeroSection from "./Components/HeroSection";
 const ProductCategories = dynamic(() => import("./Components/ProductCategories"), { ssr: true });
 const WhyChooseUs = dynamic(() => import("./Components/WhyChooseUs"), { ssr: true });
 const StatsSection = dynamic(() => import("./Components/StatsSection"), { ssr: true });
+const ClientsSlider = dynamic(() => import("./Components/ClientsSlider"), { ssr: true });
 
 export default function Home() {
   const structuredData = {
@@ -68,6 +69,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <HeroSection/>
+      <ClientsSlider/>
       <ProductCategories/>
       <WhyChooseUs />
       <StatsSection />

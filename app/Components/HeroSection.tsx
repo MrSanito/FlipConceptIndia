@@ -32,7 +32,7 @@ const HeroSection = () => {
             {/* Key Features */}
             <div className="grid grid-cols-2 gap-4 py-4">
               {[
-                { title: "15+ Years Experience", subtitle: "Industry expertise" },
+                { title: "10+ Years Experience", subtitle: "Industry expertise" },
                 { title: "10 Year Warranty", subtitle: "On all services" },
                 { title: "Certified Team", subtitle: "Trained applicators" },
                 { title: "Fair Pricing", subtitle: "Transparent quotes" }
@@ -68,9 +68,9 @@ const HeroSection = () => {
             {/* Trust Indicators */}
             <div className="flex items-center gap-6 pt-4 border-t border-gray-200 dark:border-gray-800">
               {[
-                { value: "500+", label: "Projects" },
+                { value: "100+", label: "Projects" },
                 { value: "4.8★", label: "Rating" },
-                { value: "100%", label: "Satisfaction" }
+                { value: "10+", label: "Years Exp." }
               ].map((stat, i) => (
                 <React.Fragment key={i}>
                   <div className="text-center">

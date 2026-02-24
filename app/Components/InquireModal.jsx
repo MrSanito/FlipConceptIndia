@@ -119,7 +119,7 @@ export default function InquireModal({ product, isOpen, onClose }) {
                 id="name"
                 {...register("name")}
                 placeholder="Your Name"
-                className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700"
+                className="text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-600 bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700"
               />
               {errors.name && <p className="text-red-500 text-xs">{errors.name.message}</p>}
             </div>
@@ -131,7 +131,7 @@ export default function InquireModal({ product, isOpen, onClose }) {
                 type="email"
                 {...register("email")}
                 placeholder="john@example.com"
-                 className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700"
+                 className="text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-600 bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700"
               />
               {errors.email && <p className="text-red-500 text-xs">{errors.email.message}</p>}
             </div>
@@ -143,7 +143,7 @@ export default function InquireModal({ product, isOpen, onClose }) {
                 type="tel"
                 {...register("phone")}
                 placeholder="+91 98765 43210"
-                 className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700"
+                 className="text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-600 bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700"
               />
               {errors.phone && <p className="text-red-500 text-xs">{errors.phone.message}</p>}
             </div>
@@ -155,7 +155,7 @@ export default function InquireModal({ product, isOpen, onClose }) {
                 {...register("message")}
                 rows={3}
                 placeholder="Tell us about your requirements..."
-                className="resize-none bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700"
+                className="resize-none text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-600 bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700"
               />
               {errors.message && <p className="text-red-500 text-xs">{errors.message.message}</p>}
             </div>
