@@ -15,7 +15,7 @@ export default function Home() {
     "image": "https://flipconceptindia.com/logo-transparent.png",
     "@id": "https://flipconceptindia.com",
     "url": "https://flipconceptindia.com",
-    "telephone": "+918866002566",
+    "email": "contact@flipconceptindia.com",
     "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",

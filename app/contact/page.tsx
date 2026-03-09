@@ -105,7 +105,7 @@ export default function ContactPage() {
                 onClick={() => setIsModalOpen(true)}
                 className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg shadow-blue-500/30 hover:scale-105 transition-all"
              >
-                Get Instant Quote via WhatsApp
+                Get Instant Quote via Email
              </Button>
           </motion.div>
         </div>
@@ -139,18 +139,6 @@ export default function ContactPage() {
                       Laxmipura Road, Sona Party Plot Vibhag 2,<br />
                       Gorwa, Vadodara, Gujarat, 390016
                     </p>
-                    <p className="text-blue-200 text-sm mt-1">Phone: +91 88660 02566</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-5 group/item">
-                  <div className="p-3 bg-white/10 rounded-xl backdrop-blur-md group-hover/item:bg-white/20 transition-colors">
-                    <Phone className="w-6 h-6 text-blue-200" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-blue-100 mb-1">Contact Number</h3>
-                    <p className="text-blue-50">+91 88660 02566</p>
-                    <p className="text-blue-200 text-sm mt-1">Mon-Sat 9am to 6pm</p>
                   </div>
                 </div>
 
@@ -316,7 +304,7 @@ export default function ContactPage() {
                     onClick={() => setIsModalOpen(true)}
                     className="w-full border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl h-12"
                  >
-                    Chat with us via WhatsApp
+                    Email us your Inquiry
                  </Button>
             </div>
 

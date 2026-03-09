@@ -1,24 +1,17 @@
 "use server";
 
 import { Resend } from 'resend';
+import { getInquiryEmailHtml, InquiryEmailData } from '../utils/emailTemplates';
 
 // Initialize Resend with the provided API Key
 const resend = new Resend(process.env.RESEND_API_KEY || 're_5LGL8wPT_MjbXsxEvsqAszRtPkgPH23Pg');
-
-interface EmailData {
-  name: string;
-  email: string;
-  phone: string;
-  message: string;
-  productName?: string;
-}
 
 interface ActionState {
   success: boolean;
   message: string;
 }
 
-export async function sendEmail(data: EmailData): Promise<ActionState> {
+export async function sendEmail(data: InquiryEmailData): Promise<ActionState> {
   // 1. Validate Input
   if (!data.name || !data.email || !data.phone || !data.message) {
     return { success: false, message: "Missing required fields." };
@@ -38,16 +31,7 @@ export async function sendEmail(data: EmailData): Promise<ActionState> {
         Message:
         ${data.message}
       `,
-      html: `
-        <h3>New Website Inquiry</h3>
-        <p><strong>Product:</strong> ${data.productName || "General Contact"}</p>
-        <p><strong>Name:</strong> ${data.name}</p>
-        <p><strong>Email:</strong> ${data.email}</p>
-        <p><strong>Phone:</strong> ${data.phone}</p>
-        <br/>
-        <p><strong>Message:</strong></p>
-        <p>${data.message.replace(/\n/g, "<br/>")}</p>
-      `,
+      html: getInquiryEmailHtml(data),
     });
 
     if (result.error) {

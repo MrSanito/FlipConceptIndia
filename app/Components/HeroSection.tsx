@@ -58,9 +58,9 @@ const HeroSection = () => {
                   Get Free Inspection
                 </button>
               </Link>
-              <a href="tel:+918866002566" className="w-full sm:w-auto">
-                <button className="w-full px-8 py-4 bg-white dark:bg-slate-900 border-2 border-slate-900 dark:border-white text-slate-900 dark:text-white font-bold rounded-lg hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-all">
-                  Call: +91-8866002566
+              <a href="mailto:contact@flipconceptindia.com" className="w-full sm:w-auto">
+                <button className="w-full px-8 py-4 bg-white dark:bg-slate-900 border-2 border-slate-900 dark:border-white text-slate-900 dark:text-white font-bold rounded-lg hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-all text-sm truncate">
+                  contact@flipconceptindia.com
                 </button>
               </a>
             </div>

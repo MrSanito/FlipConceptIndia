@@ -29,12 +29,12 @@ export async function generateMetadata({ params }: Props) {
     title: `${category.name} in India & Vadodara | Flip Concept India`,
     description: `Best ${category.name} services in India and Vadodara, Gujarat. Engineering-grade industrial solutions for ${productNames}. Professional contractors.`,
     keywords: [category.name, ...category.products.map(p => p.name), "best waterproofing in India", "top contractors India", "Waterproofing Vadodara", "Flip Concept India"],
-    openGraph: {
+        openGraph: {
       title: `${category.name} | Flip Concept Enterprise`,
       description: category.description,
       images: [
         {
-          url: category.image && category.image.startsWith('/') ? category.image : '/Hero.jpg',
+          url: category.image ? category.image : '/Hero.jpg',
           width: 800,
           height: 600,
           alt: category.name,
@@ -71,12 +71,10 @@ export default async function CategoryDetailPage({ params }: Props) {
       {/* Dynamic Hero Section with Parallax Effect */}
       <div className="relative h-[40vh] md:h-[50vh] overflow-hidden bg-gray-900">
          <div className="absolute inset-0">
-            <Image 
-              src={category.image && category.image.startsWith('/') ? category.image : '/Hero.jpg'} 
+            <img 
+              src={category.image ? category.image : '/Hero.jpg'} 
               alt={category.name}
-              fill
-              className="object-cover opacity-60"
-              priority
+              className="w-full h-full object-cover opacity-60"
             />
             <div className="absolute inset-0 bg-linear-to-t from-gray-950 via-gray-900/40 to-transparent" />
          </div>

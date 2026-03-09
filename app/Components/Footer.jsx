@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { categories } from "../data/data.ts";
+import Image from "next/image";
 import {
   FaFacebookF,
   FaTwitter,
@@ -14,12 +15,18 @@ const Footer = () => {
       <div className="grid md:grid-cols-4 gap-12 border-b border-gray-200 dark:border-gray-700 pb-10">
         {/* Left Section */}
         <div>
-          <h2 className="text-gray-900 dark:text-white font-bold text-lg flex items-center gap-2 mb-4">
-            <span className="text-blue-600 dark:text-blue-500 text-2xl">🛡️</span> Flip Concept India
-          </h2>
+          <Link href="/" className="inline-block mb-4">
+            <Image
+              src="/logo.png"
+              alt="Flip Concept India Logo"
+              width={180}
+              height={50}
+              className="object-contain dark:invert dark:brightness-200"
+            />
+          </Link>
           <p className="text-sm leading-relaxed mb-6">
             Engineering-grade waterproofing and high-performance industrial coating solutions.
-            Protecting your assets with cutting-edge technology and certified expertise for over 25 years.
+            Protecting your assets with cutting-edge technology and certified expertise for 10+ years.
           </p>
           
           <div className="mb-6 space-y-4">
@@ -28,7 +35,7 @@ const Footer = () => {
                 <p className="text-xs text-gray-500 dark:text-gray-400">
                   FF-5, AB Tower, Shriji Gold, Laxmipura Road, Gorwa, Vadodara, Gujarat 390016
                 </p>
-                <p className="text-xs text-blue-600 dark:text-blue-400 mt-1">Ph: +91 88660 02566</p>
+                <p className="text-xs text-blue-600 dark:text-blue-400 mt-1">Email: contact@flipconceptindia.com</p>
              </div>
           </div>
 

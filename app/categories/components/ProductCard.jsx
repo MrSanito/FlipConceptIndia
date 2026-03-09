@@ -14,13 +14,11 @@ const ProductCard = ({ product }) => {
         onClick={() => setIsModalOpen(true)}
         className="group bg-white dark:bg-gray-900 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 overflow-hidden flex flex-col h-full cursor-pointer"
       >
-        <div className="relative h-48 overflow-hidden bg-gray-100 dark:bg-gray-800">
-          <Image
+        <div className="relative h-48 overflow-hidden bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
+          <img
             src={product.image}
             alt={product.name}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover object-center transition-transform duration-700 group-hover:scale-110 scale-[1.03]"
+            className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 scale-[1.03]"
           />
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
         </div>

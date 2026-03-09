@@ -1,5 +1,6 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
+import { getContactEmailHtml } from '../../utils/emailTemplates';
 
 const resend = new Resend(process.env.RESEND_API_KEY || 're_5LGL8wPT_MjbXsxEvsqAszRtPkgPH23Pg');
 
@@ -19,12 +20,7 @@ export async function POST(req: Request) {
       from: 'Flip Concept India <onboarding@resend.dev>', // Update this with your verified domain later if you want
       to: ['1988krishnani@gmail.com'], // Send to the admin's email or the test email
       subject: `New Contact Form Submission: ${subject}`,
-      html: `
-        <h2>New Message from ${name}</h2>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, '<br>')}</p>
-      `,
+      html: getContactEmailHtml({ name, email, subject, message }),
     });
 
     if (data.error) {
