@@ -10,8 +10,8 @@ const ProductCard = ({ product }) => {
 
   return (
     <>
-      <div 
-        onClick={() => setIsModalOpen(true)}
+      <Link 
+        href={`/categories/${product.categoryId}/${product.id}`}
         className="group bg-white dark:bg-gray-900 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 overflow-hidden flex flex-col h-full cursor-pointer"
       >
         <div className="relative h-48 overflow-hidden bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
@@ -28,7 +28,7 @@ const ProductCard = ({ product }) => {
             {product.name}
           </h3>
           <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3 flex-1">
-            High-quality {product.name} designed for industrial precision and durability.
+            {product.description}
           </p>
           
           <div className="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between gap-3">
@@ -36,13 +36,19 @@ const ProductCard = ({ product }) => {
              {product.price !== "₹---" ? product.price : "Ask for Price"} 
             </span>
             <button 
-              className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors shadow-md hover:shadow-lg active:scale-95"
+              onClick={(e) => {
+                e.preventDefault();
+                const phoneNumber = "919313280144";
+                const message = `Hi Flip Concept India, I am interested in ${product.name}. Please provide more details.`;
+                window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
+              }}
+              className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-lg transition-colors shadow-md hover:shadow-lg active:scale-95 flex items-center gap-2"
             >
               Inquire Now
             </button>
           </div>
         </div>
-      </div>
+      </Link>
 
       <InquireModal 
         isOpen={isModalOpen} 
