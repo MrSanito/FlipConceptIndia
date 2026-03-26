@@ -172,19 +172,19 @@ export default async function CategoryDetailPage({ params }: Props) {
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://flipconceptindia.com"
+                    "item": "https://www.flipconceptindia.com"
                   },
                   {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Categories",
-                    "item": "https://flipconceptindia.com/categories"
+                    "item": "https://www.flipconceptindia.com/categories"
                   },
                   {
                     "@type": "ListItem",
                     "position": 3,
                     "name": category.name,
-                    "item": `https://flipconceptindia.com/categories/${category.id}`
+                    "item": `https://www.flipconceptindia.com/categories/${category.id}`
                   }
                 ]
               },
@@ -197,7 +197,7 @@ export default async function CategoryDetailPage({ params }: Props) {
                         "@type": "Product",
                         "name": product.name,
                         "description": `High-quality ${product.name} in Vadodara from Flip Concept India. Professional ${category.name} services.`,
-                        "image": product.image && product.image.startsWith('/') ? `https://flipconceptindia.com${product.image}` : product.image || "https://flipconceptindia.com/og-image.jpg",
+                        "image": product.image && product.image.startsWith('/') ? `https://www.flipconceptindia.com${product.image}` : product.image || "https://www.flipconceptindia.com/og-image.jpg",
                          "offers": {
                             "@type": "Offer",
                             "availability": "https://schema.org/InStock",

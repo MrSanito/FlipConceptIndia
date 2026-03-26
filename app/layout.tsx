@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "professional waterproofing India",
     "engineering-grade waterproofing"
   ],
-  authors: [{ name: "Flip Concept India", url: "https://flipconceptindia.com" }],
+  authors: [{ name: "Flip Concept India", url: "https://www.flipconceptindia.com" }],
   creator: "Flip Concept India",
   publisher: "Flip Concept India",
   formatDetection: {
@@ -49,14 +49,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://flipconceptindia.com'),
+  metadataBase: new URL('https://www.flipconceptindia.com'),
   alternates: {
-    canonical: '/',
+    canonical: './',
   },
   openGraph: {
     title: "Flip Concept India - Professional Waterproofing Solutions",
     description: "Heavy-duty, engineering-grade industrial waterproofing protection. 15+ years experience, 500+ projects completed. Expert craftsmanship for lasting durability.",
-    url: 'https://flipconceptindia.com',
+    url: 'https://www.flipconceptindia.com',
     siteName: 'Flip Concept India',
     images: [
       {

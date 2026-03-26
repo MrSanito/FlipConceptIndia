@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
  
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://flipconceptindia.com'
+  const baseUrl = 'https://www.flipconceptindia.com'
   
   return {
     rules: {

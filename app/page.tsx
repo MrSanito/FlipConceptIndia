@@ -12,9 +12,9 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Flip Concept India",
-    "image": "https://flipconceptindia.com/logo-transparent.png",
-    "@id": "https://flipconceptindia.com",
-    "url": "https://flipconceptindia.com",
+    "image": "https://www.flipconceptindia.com/logo-transparent.png",
+    "@id": "https://www.flipconceptindia.com",
+    "url": "https://www.flipconceptindia.com",
     "email": "contact@flipconceptindia.com",
     "priceRange": "₹₹",
     "address": {

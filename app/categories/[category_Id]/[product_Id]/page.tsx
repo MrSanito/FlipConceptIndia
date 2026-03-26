@@ -191,14 +191,14 @@ export default async function ProductDetailPage({ params }: Props) {
             "@type": "Product",
             "name": product.name,
             "description": product.description,
-            "image": product.image && product.image.startsWith('/') ? `https://flipconceptindia.com${product.image}` : product.image || "https://flipconceptindia.com/og-image.jpg",
+            "image": product.image && product.image.startsWith('/') ? `https://www.flipconceptindia.com${product.image}` : product.image || "https://www.flipconceptindia.com/og-image.jpg",
             "brand": {
               "@type": "Brand",
               "name": "Flip Concept India"
             },
             "offers": {
               "@type": "Offer",
-              "url": `https://flipconceptindia.com/categories/${category.id}/${product.id}`,
+              "url": `https://www.flipconceptindia.com/categories/${category.id}/${product.id}`,
               "priceCurrency": "INR",
               "price": "0",
               "availability": "https://schema.org/InStock"

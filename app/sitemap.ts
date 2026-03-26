@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { categories } from './data/data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://flipconceptindia.com'
+  const baseUrl = 'https://www.flipconceptindia.com'
 
   // Static routes
   const staticRoutes = [

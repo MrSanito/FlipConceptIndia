@@ -6,44 +6,6 @@ export const categories = [
     "description": "Comprehensive waterproofing solutions to stop water from entering structures.",
     "products": [
       { 
-        "id": "wp-building", 
-        "name": "Building Waterproofing", 
-        "description": "Complete waterproofing for terraces, roofs (flat, tiled, concrete, IBR steel, clip-lock), balconies, parapet walls, skylights, gutters, sidewalls, and chimneys.", 
-        "image": "https://images.unsplash.com/photo-1584662137135-0c37f4d37e73?w=800&q=80", 
-        "price": "Ask for Price",
-        "specifications": {
-          "Material": "Polyurethane / Acrylic Hybrid",
-          "Application": "Brush, Roller, or Spray",
-          "Coverage": "1.5 - 2.0 kg/m² (2 coats)",
-          "Curing Time": "24 - 48 hours",
-          "Durability": "10 - 15 Years",
-          "UV Resistance": "High",
-          "Chemical Resistance": "Moderate",
-          "Temperature Range": "-10°C to +80°C"
-        },
-        "useCases": ["Residential Terraces", "Commercial Roofs", "Balconies", "Parapet Walls"],
-        "bestUsage": "Best applied on a clean, dry concrete surface with a primer coat for maximum adhesion and longevity."
-      },
-      { 
-        "id": "wp-structural", 
-        "name": "Structural Waterproofing", 
-        "description": "Specialized solutions for basements, tanks, tanking systems, and injection grouting (crack sealing).", 
-        "image": "https://images.unsplash.com/photo-1581092335738-e57b21d66e58?w=800&q=80", 
-        "price": "Ask for Price",
-        "specifications": {
-          "Material": "Crystalline / Cementitious",
-          "Application": "Injection Grouting, Slurry",
-          "Coverage": "1.0 - 1.5 kg/m²",
-          "Curing Time": "3 - 7 days (full cure)",
-          "Durability": "Lifetime (Structural)",
-          "UV Resistance": "N/A (Below Ground)",
-          "Chemical Resistance": "High",
-          "Adhesion": "Excellent to Concrete"
-        },
-        "useCases": ["Basements", "Water Tanks", "Retaining Walls", "Foundations"],
-        "bestUsage": "Ideal for negative side waterproofing where external access is limited. Use injection grouting for active leak sealing."
-      },
-      { 
         "id": "wp-acrylic", 
         "name": "Acrylic Seal Systems", 
         "description": "Advanced acrylic-based sealing systems for durable waterproofing.", 
@@ -80,205 +42,6 @@ export const categories = [
         },
         "useCases": ["Sewage Treatment Plants", "Dam Walls", "Bridge Decks", "Tunnels"],
         "bestUsage": "Apply to moist concrete. The crystals grow deep into the capillary tracts of the concrete when water is present."
-      },
-      { 
-        "id": "wp-fibre", 
-        "name": "Fibre Seal Systems", 
-        "description": "Fibre-reinforced waterproofing for added strength and flexibility.", 
-        "image": "https://images.unsplash.com/photo-1581093172267-4e50fb8f8bc0?w=800&q=80", 
-        "price": "Ask for Price",
-        "specifications": {
-          "Material": "Fibre-Reinforced Acrylic/PU",
-          "Application": "Brush or Roller",
-          "Coverage": "1.2 - 1.8 kg/m²",
-          "Curing Time": "12 - 24 hours",
-          "Durability": "8 - 12 Years",
-          "Tensile Strength": "High",
-          "UV Resistance": "Excellent",
-          "Crack Bridging": "Excellent"
-        },
-        "useCases": ["Roofs with high vibration", "Area with micro-cracks", "Joint sealing"],
-        "bestUsage": "The built-in fibres eliminate the need for separate mesh reinforcement in many cases."
-      },
-      { 
-        "id": "wp-torch", 
-        "name": "Torch-on Membrane Systems", 
-        "description": "Bitumen-based torch-on membranes for heavy-duty roof waterproofing.", 
-        "image": "https://images.unsplash.com/photo-1581092916692-8d71e89ce5d8?w=800&q=80", 
-        "price": "Ask for Price",
-        "specifications": {
-          "Material": "APP/SBS Modified Bitumen",
-          "Thickness": "3mm or 4mm",
-          "Application": "Torch Flame Melting",
-          "Reinforcement": "Polyester / Glass Fibre",
-          "Durability": "15 - 20 Years",
-          "Puncture Resistance": "High",
-          "Flexibility": "Down to -15°C",
-          "Joint Integrity": "Superior"
-        },
-        "useCases": ["Flat Concrete Roofs", "Bridge Decks", "Podiums", "Large Industrial Sheds"],
-        "bestUsage": "Ensure $75mm$ overlap for all joints. Professional application is critical for standard flame heating."
-      },
-      { 
-        "id": "wp-uv", 
-        "name": "UV Silver Coatings", 
-        "description": "Reflective UV protective coatings to extend the life of waterproofing systems.", 
-        "image": "https://images.unsplash.com/photo-1581093815556-fd1493d5d7b2?w=800&q=80", 
-        "price": "Ask for Price",
-        "specifications": {
-          "Material": "Aluminium Pigmented Bituminous",
-          "Application": "Brush, Spray",
-          "Coverage": "6 - 8 m²/liter",
-          "Curing Time": "8 - 12 hours",
-          "Solar Reflectance": "High (>70%)",
-          "UV Shielding": "Maximum",
-          "Finish": "Metallic Silver",
-          "Heat Reduction": "Up to 5°C - 8°C"
-        },
-        "useCases": ["Maintenance of Bituminous Roofs", "Steel structures", "Storage tanks"],
-        "bestUsage": "Apply as a finish coat over existing bitumen membranes to prevent UV degradation and reduce cooling costs."
-      },
-      { 
-        "id": "wp-polyurea", 
-        "name": "Polyurea Waterproofing Coatings", 
-        "description": "High-performance, rapid-curing polyurea coatings for superior protection.", 
-        "image": "https://images.unsplash.com/photo-1581093172267-4e50fb8f8bc0?w=800&q=80", 
-        "price": "Ask for Price",
-        "specifications": {
-          "Material": "Pure Polyurea",
-          "Application": "Plural Component Spray",
-          "Set Time": "15 - 30 seconds",
-          "Return to Service": "1 - 2 hours",
-          "Durability": "25+ Years",
-          "Elongation": "> 400%",
-          "Chemical Resistance": "Superior",
-          "Hardness": "Shore D 45-55"
-        },
-        "useCases": ["Waste Water Plants", "Mining Infrastructure", "Parking Decks", "Secondary Containment"],
-        "bestUsage": "Requires specialized high-pressure spray equipment. Ideal for fast-track projects where downtime must be minimized."
-      }
-    ]
-  },
-  {
-    "id": "protective-industrial-coatings",
-    "name": "Protective & Industrial Coatings",
-    "image": "/assets/categories/Protective & Industrial Coatings png.jpg",
-    "description": "High-performance coatings to protect steel & concrete from corrosion, chemicals, and wear.",
-    "products": [
-      { 
-        "id": "pic-anti-corrosion", 
-        "name": "Anti-Corrosion Coatings", 
-        "description": "Robust protection against rust and corrosion for industrial assets.", 
-        "image": "https://images.unsplash.com/photo-1581092935268-e7c5b33be067?w=800&q=80", 
-        "price": "Ask for Price",
-        "specifications": {
-          "Type": "Zinc-Rich Epoxy / Polyurethane",
-          "Protection": "Cathodic & Barrier",
-          "Surface Prep": "SA 2.5 Sand Blasting",
-          "Finish": "Semi-Gloss / Matte",
-          "Salt Spray Resistance": "> 2000 hours",
-          "Temp Resistance": "Up to 120°C",
-          "DFT": "150 - 250 microns"
-        },
-        "useCases": ["Steel Bridges", "Offshore Platforms", "Industrial Pipelines", "Chemical Plants"],
-        "bestUsage": "Apply multi-coat system consisting of primer, intermediate, and topcoat for long-term corrosion protection in harsh environments."
-      },
-      { 
-        "id": "pic-industrial", 
-        "name": "Industrial Protective Coatings", 
-        "description": "General purpose protective coatings for various industrial applications.", 
-        "image": "https://images.unsplash.com/photo-1581092160562-40fed08e5e2d?w=800&q=80", 
-        "price": "Ask for Price",
-        "specifications": {
-          "Material": "Epoxy Polyamide",
-          "Application": "Airless Spray / Roller",
-          "Coverage": "4 - 5 m²/liter",
-          "Curing Time": "16 hours (re-coat)",
-          "Impact Resistance": "Good",
-          "Abrasion Resistance": "High",
-          "Color Range": "Available in RAL shades"
-        },
-        "useCases": ["Factory Walls", "Machinery", "Steel Doors", "Structural Steel"],
-        "bestUsage": "Versatile coating for indoor industrial environments with good mechanical and limited chemical resistance."
-      },
-      { 
-        "id": "pic-tank", 
-        "name": "Tank & Pipeline Coatings", 
-        "description": "Specialized linings and coatings for storage tanks and pipelines.", 
-        "image": "https://images.unsplash.com/photo-1581093813860-4e7c3277c7a5?w=800&q=80", 
-        "price": "Ask for Price",
-        "specifications": {
-          "Material": "Novolac Epoxy / Vinyl Ester",
-          "Chemical Resistance": "Extreme (Acids/Alkalis)",
-          "Application": "Specialized Spray",
-          "Max Temp (Immersion)": "Up to 90°C",
-          "Reinforcement": "Glass Flake (Optional)",
-          "Thickness": "500 - 1500 microns"
-        },
-        "useCases": ["Chemical Storage Tanks", "Oil Pipelines", "Pickling Tanks", "Cooling Towers"],
-        "bestUsage": "Specify the exact chemical stored to ensure the correct resin system is selected for the lining."
-      },
-      { 
-        "id": "pic-polyurea-storage", 
-        "name": "Storage Tank Polyurea Coatings", 
-        "description": "Seamless polyurea linings for chemical and water storage tanks.", 
-        "image": "https://images.unsplash.com/photo-1581092941260-c5a1c9fc5e1d?w=800&q=80", 
-        "price": "Ask for Price",
-        "specifications": {
-          "Material": "High-Grade Polyurea",
-          "Flexibility": "High (Bridging cracks)",
-          "Application": "Heated Spray",
-          "Zero VOC": "Yes",
-          "Drinking Water Safe": "Available (NSF)",
-          "Cure Time": "Instant",
-          "Leak Protection": "Seamless"
-        },
-        "useCases": ["Potable Water Tanks", "Waste Water Digesters", "Bund Areas"],
-        "bestUsage": "Excellent for monolithic lining of large concrete tanks where structural movement is expected."
-      }
-    ]
-  },
-  {
-    "id": "chemical-industrial-flooring",
-    "name": "Chemical & Industrial Flooring",
-    "image": "/assets/categories/Chemical & Industrial Flooring.jpg",
-    "description": "Durable, chemical-resistant, heavy-duty floors for demanding environments.",
-    "products": [
-      { 
-        "id": "floor-epoxy", 
-        "name": "Epoxy Flooring", 
-        "description": "Seamless, high-gloss, and durable epoxy flooring for industrial and commercial spaces.", 
-        "image": "https://images.unsplash.com/photo-1577005505120-ecb83d97d5fa?w=800&q=80", 
-        "price": "Ask for Price",
-        "specifications": {
-          "System": "Self-Levelling Epoxy (SL)",
-          "Thickness": "2mm - 5mm",
-          "Compressive Strength": "> 60 N/mm²",
-          "Finish": "High Gloss / Matte / Anti-slip",
-          "Chemical Resistance": "Good (Oils, Fuels)",
-          "Durability": "Heavy Traffic",
-          "Cleaning": "Easy-to-clean Seamless"
-        },
-        "useCases": ["Pharma Plants", "Automobile Showrooms", "Electronics Factories", "Warehouses"],
-        "bestUsage": "Surface must be shot-blasted or diamond ground to achieve CSP 2-3 before application."
-      },
-      { 
-        "id": "floor-pu", 
-        "name": "PU (Polyurethane) Flooring", 
-        "description": "Flexible and impact-resistant polyurethane flooring systems.", 
-        "image": "https://images.unsplash.com/photo-1581092160562-40fed08e5e2d?w=800&q=80", 
-        "price": "Ask for Price",
-        "specifications": {
-          "System": "PU Concrete / Screed",
-          "Thickness": "6mm - 9mm",
-          "Temp Resistance": "-40°C to +120°C",
-          "Impact Resistance": "Extreme",
-          "Chemical Resistance": "Very High (Acids, Lactic)",
-          "Microbial Growth": "Inhibits (Hygienic)",
-          "Slip Resistance": "Adjustable (R10 - R13)"
-        },
-        "useCases": ["Food & Beverage Processing", "Cold Storage", "Kitchens", "Dairy Plants"],
-        "bestUsage": "Preferred for 'wet' industrial areas where thermal shock (hot water washing) is frequent."
       }
     ]
   },
@@ -289,21 +52,21 @@ export const categories = [
     "description": "Effective thermal and acoustic insulation solutions to control heat and sound.",
     "products": [
       { 
-        "id": "ins-thermal", 
-        "name": "Thermal Insulation", 
-        "description": "Solutions to reduce heat transfer and improve energy efficiency.", 
-        "image": "https://images.unsplash.com/photo-1581093172267-4e50fb8f8bc0?w=800&q=80", 
+        "id": "ins-acoustic", 
+        "name": "Acoustic Insulation", 
+        "description": "High-performance soundproofing solutions for residential and commercial spaces.", 
+        "image": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&q=80", 
         "price": "Ask for Price",
         "specifications": {
-          "Material": "Polyurethane Foam / Glass Wool",
-          "R-Value": "High Efficiency",
-          "Fire Rating": "Class A / Class B",
-          "Density": "32 - 40 kg/m³ (Spray Foam)",
-          "Thermal Conductivity": "< 0.022 W/m.K",
-          "Moisture Absorption": "Low"
+          "Material": "Acoustic Foam / Mineral Wool",
+          "NRC Rating": "0.85 - 1.0",
+          "Thickness": "25mm - 100mm",
+          "Fire Rating": "Class A",
+          "Density": "40 - 100 kg/m³",
+          "Installation": "Mechanical or Adhesive"
         },
-        "useCases": ["Rooftop insulation", "Cold storages", "HVAC ducts", "Residential attics"],
-        "bestUsage": "Spray foam provides both insulation and air-sealing in a single application for maximum efficiency."
+        "useCases": ["Staging Studios", "Home Theaters", "Office Boardrooms", "Industrial Enclosures"],
+        "bestUsage": "Combine with air gaps and high-density mass-loaded vinyl for maximum sound transmission loss."
       }
     ]
   },
@@ -314,46 +77,69 @@ export const categories = [
     "description": "Professional painting services for protection and appearance enhancement.",
     "products": [
       { 
-        "id": "paint-industrial", 
-        "name": "Industrial & Factory Painting", 
-        "description": "Heavy-duty painting for factories, warehouses, and industrial plants.", 
-        "image": "https://images.unsplash.com/photo-1581093815556-fd1493d5d7b2?w=800&q=80", 
+        "id": "paint-residential", 
+        "name": "Residential Estate Painting", 
+        "description": "Premium painting services for luxury residential estates and complexes.", 
+        "image": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&q=80", 
         "price": "Ask for Price",
         "specifications": {
-          "System": "High-Build Coatings",
-          "Application": "Airless Spray / Roller",
-          "Appearance": "Uniform Industrial Finish",
-          "Chemical Resistance": "Moderate",
-          "Durability": "High Wear",
-          "Color Retention": "Excellent"
+          "Type": "Premium Acrylic Emulsion",
+          "Finish": "Sheen / Matte / Satin",
+          "Durability": "8 - 10 Years",
+          "Washability": "High",
+          "Eco-Friendly": "Low VOC",
+          "Warranty": "5 - 7 Years"
         },
-        "useCases": ["Industrial Sheds", "Factory Walls", "Structural Steelwork"],
-        "bestUsage": "Use airless spray application for large surfaces to ensure uniform thickness and fast project completion."
-      }
-    ]
-  },
-  {
-    "id": "damp-proofing",
-    "name": "Damp Proofing",
-    "image": "/assets/categories/Damp Proofing.jpg",
-    "description": "Expert treatments to stop moisture damage in walls and foundations.",
-    "products": [
+        "useCases": ["Luxury Houses", "Gated Estates", "Apartment Blocks"],
+        "bestUsage": "Full surface preparation including crack filling and priming is essential for estate-level longevity."
+      },
       { 
-        "id": "damp-rising", 
-        "name": "Rising Damp Treatment", 
-        "description": "Chemical injection damp coursing to stop rising ground moisture.", 
-        "image": "https://images.unsplash.com/photo-1581092941260-c5a1c9fc5e1d?w=800&q=80", 
+        "id": "paint-fence", 
+        "name": "Fence & Wall Painting", 
+        "description": "Durable coatings for boundary walls and fences to withstand the elements.", 
+        "image": "https://images.unsplash.com/photo-1562663474-6cbb3fee4c77?w=800&q=80", 
         "price": "Ask for Price",
         "specifications": {
-          "Material": "Silane-Siloxane Cream / Liquid",
-          "Application": "Low Pressure Injection",
-          "Spacing": "100mm - 150mm centers",
-          "Effect": "Hydrophobic barrier",
-          "Life Expectancy": "20+ Years",
-          "Odorless": "Yes"
+          "Type": "Weather-resistant Acrylic",
+          "UV Protection": "Maximized",
+          "Fungal Resistance": "Excellent",
+          "Adhesion": "Superior to Masonry/Steel",
+          "Application": "Brush, Roller, or Spray"
         },
-        "useCases": ["Old Masonry Walls", "Heritage Buildings", "Ground Floor Walls"],
-        "bestUsage": "Horizontal drill at the lowest possible mortar joint and inject until saturated for a continuous barrier."
+        "useCases": ["Boundary Walls", "Steel Fencing", "Garden Walls"],
+        "bestUsage": "Includes high-pressure water cleaning to remove algae and loose debris before painting."
+      },
+      { 
+        "id": "paint-interior", 
+        "name": "Interior Painting", 
+        "description": "Meticulous interior painting with a focus on finish and detail.", 
+        "image": "https://images.unsplash.com/photo-1562664377-709f2c337eb2?w=800&q=80", 
+        "price": "Ask for Price",
+        "specifications": {
+          "Type": "Interior Luxury Emulsion",
+          "Finish": "Silk / Velvet / Pearl",
+          "Odor": "Near Zero",
+          "Stain Resistance": "Very High",
+          "Coverage": "12 - 14 m²/liter"
+        },
+        "useCases": ["Living Rooms", "Bedrooms", "Office Interiors"],
+        "bestUsage": "Ideal for high-traffic indoor areas where a smooth, washable finish is required."
+      },
+      { 
+        "id": "paint-exterior", 
+        "name": "Exterior Painting", 
+        "description": "Heavy-duty exterior coatings designed for long-term protection and color retention.", 
+        "image": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&q=80", 
+        "price": "Ask for Price",
+        "specifications": {
+          "Type": "Pure Acrylic Exterior Emulsion",
+          "Weather Shield": "Advanced Tech",
+          "Dirt Pick-up Resistance": "High",
+          "Breathability": "Yes",
+          "Warranty": "Up to 10 Years"
+        },
+        "useCases": ["Commercial Buildings", "High-rise Facades", "External House Walls"],
+        "bestUsage": "Best applied in dry weather with a dedicated exterior primer for maximum bonding."
       }
     ]
   },
@@ -364,95 +150,51 @@ export const categories = [
     "description": "Comprehensive repair and restoration services for damaged roof structures.",
     "products": [
       { 
-        "id": "roof-leak", 
-        "name": "Roof Leak Repairs", 
-        "description": "Rapid response to seal active leaks and prevent water damage.", 
-        "image": "https://images.unsplash.com/photo-1581092941260-c5a1c9fc5e1d?w=800&q=80", 
+        "id": "roof-ibr", 
+        "name": "IBR Roof Repairs", 
+        "description": "Specialized repairs for IBR metal roofing, addressing rust, leaks, and loose fixings.", 
+        "image": "https://images.unsplash.com/photo-1632759145351-1d592919f522?w=800&q=80", 
         "price": "Ask for Price",
         "specifications": {
-          "Method": "Flashband / Liquid Membrane",
-          "Response Time": "Emergency Priority",
-          "Compatibility": "All Roof Types",
-          "Durability": "Immediate Seal",
-          "Warranty": "Subject to conditions"
+          "Material": "Metal Sealants / Anti-corrosive Primers",
+          "System": "Bolt Sealing & Waterproofing",
+          "Corrosion Protection": "High",
+          "Flexibility": "Thermal Movement Compatible"
         },
-        "useCases": ["Active Roof Leaks", "Joint Failures", "Emergency Repairs"],
-        "bestUsage": "Ideal for temporary stop-gap during rains or as part of a larger restoration project."
-      }
-    ]
-  },
-  {
-    "id": "inspection-technical-reporting",
-    "name": "Inspection & Technical Reporting",
-    "image": "/assets/categories/inspection & technical reporting.jpg",
-    "description": "Professional diagnosis, inspections, and technical reporting services.",
-    "products": [
+        "useCases": ["Industrial Warehouses", "Steel Sheds", "Metal Roofed Houses"],
+        "bestUsage": "Includes wire brushing rust and applying a zinc-rich primer before sealing bolts and joints."
+      },
       { 
-        "id": "inspect-analysis", 
-        "name": "Cause & Remedy Analysis", 
-        "description": "Investigative reports to determine root causes of failure and propose solutions.", 
-        "image": "https://images.unsplash.com/photo-1581093815556-fd1493d5d7b2?w=800&q=80", 
+        "id": "roof-flashing", 
+        "name": "Flashing Repairs", 
+        "description": "Sealing and repairing roof flashing around chimneys, skylights, and valleys.", 
+        "image": "https://images.unsplash.com/photo-1505798577917-a65157d3320a?w=800&q=80", 
         "price": "Ask for Price",
         "specifications": {
-          "Method": "Visual & NDT (Non-Destructive)",
-          "Reporting": "Detailed Technical PDF",
-          "Scope": "Failure Identification",
-          "Standards": "Engineering Best Practices",
-          "Recommendations": "Step-by-step Remedy"
+          "Material": "Liquid Membrane / Fibre Reinforcement",
+          "System": "Seamless Flashing Seal",
+          "Adhesion": "Multi-surface compatibility",
+          "Durability": "8 - 12 Years"
         },
-        "useCases": ["Litigation support", "Insurance claims", "Maintenance planning"],
-        "bestUsage": "Crucial before any major renovation to ensure you are fixing the cause, not just the symptom."
-      }
-    ]
-  },
-  {
-    "id": "construction-material-supply",
-    "name": "Construction Material Supply",
-    "image": "/assets/categories/Construction Material Supply.jpg",
-    "description": "Supply of quality construction materials including Vermiculite.",
-    "products": [
+        "useCases": ["Chimney Joints", "Roof Thru-pipes", "Parapet Transitions"],
+        "bestUsage": "Involves removing old, cracked cement flashing and replacing with flexible, fibre-reinforced liquid membranes."
+      },
       { 
-        "id": "mat-vermiculite", 
-        "name": "Vermiculite (All Grades)", 
-        "description": "Supply of raw Vermiculite in various grades for construction and horticulture.", 
-        "image": "https://images.unsplash.com/photo-1581092160562-40fed08e5e2d?w=800&q=80", 
+        "id": "roof-pitched", 
+        "name": "Pitched Roof Repairs", 
+        "description": "Repairing and waterproofing tiled or concrete pitched roofs.", 
+        "image": "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=800&q=80", 
         "price": "Ask for Price",
         "specifications": {
-          "Material": "Exfoliated Vermiculite",
-          "Grades": "Fine, Medium, Coarse",
-          "Purity": "> 98%",
-          "pH Value": "Neutral (7.0)",
-          "Bulk Density": "60 - 120 kg/m³",
-          "Fire Rating": "Non-Combustible"
+          "Material": "Tile Sealants / Acrylic Coating",
+          "System": "Ridge Capping & Tile Waterproofing",
+          "UV Resistance": "Maximum",
+          "Finish": "Color Matched to Tiles"
         },
-        "useCases": ["Lightweight Screeds", "Pool linings", "Soil conditioning", "Fireproofing"],
-        "bestUsage": "Mix with cement for high-performance thermal insulation screeds on flat roofs."
-      }
-    ]
-  },
-  {
-    "id": "equipment-application-capability",
-    "name": "Equipment & Application Capability",
-    "image": "/assets/categories/Equipment & Application Capability.jpg",
-    "description": "Our fleet of specialized equipment for professional application.",
-    "products": [
-      { 
-        "id": "equip-polyurea", 
-        "name": "Polyurea Coating Machines", 
-        "description": "High-pressure reactors for spraying polyurea coatings.", 
-        "image": "https://images.unsplash.com/photo-1581092935268-e7c5b33be067?w=800&q=80", 
-        "price": "Ask for Price",
-        "specifications": {
-          "Type": "Plural Component Proportioner",
-          "Max Pressure": "3500 psi",
-          "Heating Capacity": "Up to 80°C",
-          "Hose Length": "Up to 90m",
-          "Output": "5 - 15 kg/min",
-          "Power": "3-Phase Electric"
-        },
-        "useCases": ["Polyurea liners", "Foam insulation", "Large scale projects"],
-        "bestUsage": "Operated by certified technicians to ensure precise mixing ratio and material performance."
+        "useCases": ["Residential Houses", "Churches", "Heritage Buildings"],
+        "bestUsage": "Includes replacing broken tiles and re-pointing ridge caps with flexible polymer mortar."
       }
     ]
   }
-];
+];
+
